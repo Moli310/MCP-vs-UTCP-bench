@@ -34,7 +34,7 @@ flowchart LR
     B["B: UTCP client"] -->|HTTP| R["FastAPI REST API<br/>(OpenAPI spec becomes the UTCP manual)"]
     S --> Q["shared/queries.py"]
     R --> Q
-    Q --> D[("SQLite:  IAM data<br/>opened read-only")]
+    Q --> D[("SQLite: Mock  IAM data<br/>opened read-only")]
 ```
 
 - **Path A, MCP:** the baseline. An MCP client launches the MCP server and calls its tools over stdio.
