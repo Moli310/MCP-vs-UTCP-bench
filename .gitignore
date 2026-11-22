@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment (recreate it with: python -m venv .venv)
+.venv/
+
+# Generated database (recreate it with task 1 or task 5)
+data/iam.db
+
+# Excel lock files, created while history.xlsx is open
+~$*.xlsx
+
+# Old test file, not part of the results
+results/bench_results_with_logging.csv
+
+# Operating system files
+Thumbs.db
+.DS_Store

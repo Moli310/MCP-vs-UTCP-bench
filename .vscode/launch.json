@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug interop demo (Path C)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "path_c_bridge.demo_both",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": false
+    },
+    {
+      "name": "Debug benchmark (errors only, not for timing)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "bench.run_bench",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
