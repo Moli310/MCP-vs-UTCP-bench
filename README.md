@@ -2,7 +2,7 @@
 
 This project measures how two AI tool-calling protocols compare when everything else is held constant: the **Model Context Protocol (MCP)** and the **Universal Tool Calling Protocol (UTCP)**.
 
-The same three read-only SQL tools, running on the same synthetic identity and access management (IAM) database, are called three different ways. Only the protocol path changes, so any difference in the results comes from the protocol layer, not from different code or data.
+The same three read-only SQL tools, running on the same Mock identity and access management (IAM) database, are called three different ways. Only the protocol path changes, so any difference in the results comes from the protocol layer, not from different code or data.
 
 ## Key findings
 
@@ -34,7 +34,7 @@ flowchart LR
     B["B: UTCP client"] -->|HTTP| R["FastAPI REST API<br/>(OpenAPI spec becomes the UTCP manual)"]
     S --> Q["shared/queries.py"]
     R --> Q
-    Q --> D[("SQLite: synthetic IAM data<br/>opened read-only")]
+    Q --> D[("SQLite:  IAM data<br/>opened read-only")]
 ```
 
 - **Path A, MCP:** the baseline. An MCP client launches the MCP server and calls its tools over stdio.
@@ -148,4 +148,4 @@ Python · FastAPI · Uvicorn · MCP Python SDK (FastMCP) · UTCP with the `utcp-
 
 Library versions used for the findings above: mcp 1.30.0, utcp 1.2.0, utcp-http 1.1.15, utcp-mcp 1.2.0, fastapi 0.165.0, uvicorn 0.54.0, Python 3.11.9.
 
-All data in this project is synthetic. No real identities or company data are used.
+All data in this project is Moc No real identities or company data are used.
